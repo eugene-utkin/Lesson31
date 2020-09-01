@@ -3,27 +3,12 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 
-set :database, {adapter: "sqlite3", database: "barbershop.db"}
-
-class Client < ActiveRecord::Base
-  validates :name, presence: true, length: { minimum: 3 }
-  validates :phone, presence: true
-  validates :datestamp, presence: true
-  validates :color, presence: true
-end
-
-class Barber < ActiveRecord::Base
-end
-
-class Message < ActiveRecord::Base
-end
-
-before do
-  
-end
-
 get '/' do
 	erb :index			
+end
+
+get '/about' do
+  erb :about
 end
 
 get '/visit' do
