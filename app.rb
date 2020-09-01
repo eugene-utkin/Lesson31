@@ -1,10 +1,7 @@
-#encoding: utf-8
-
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
-require 'sinatra/activerecord'
-#require 'pony'
+
 
 set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
