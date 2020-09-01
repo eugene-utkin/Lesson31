@@ -22,7 +22,6 @@ class Message < ActiveRecord::Base
 end
 
 before do
-	@barbers = Barber.all
   
 end
 
