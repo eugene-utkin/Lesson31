@@ -1,0 +1,32 @@
+<html>
+<head>
+  
+    
+  </head>
+  <body>
+<h2>Список клиентов</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Имя</th>
+      <th scope="col">Телефон</th>
+      <th scope="col">Дата и время</th>
+      <th scope="col">Парикмахер</th>
+      <th scope="col">Цвет</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @client.each do |row| %>
+    <tr>
+      <td><a href="/client/<%= row['id'] %>"><%= row['name']%></a></td>
+      <td><%= row['phone']%></td>
+      <td><%= row['datestamp']%></td>
+      <td><%= row['barber']%></td>
+      <td style="background-color: <%= row['color'] %>"><%= row['color']%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</body>
+</html>
