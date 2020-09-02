@@ -1,2 +1,16 @@
 <h2>Welcome to Pizza Shop!</h2>
 <button class="btn btn-primary" onclick="something()">Click Me!</button>
+<% @products.each do |product| %>
+        <p>
+            <div class="card" style="width: 18rem;">
+  			<div class="card-body">
+    			<h5 class="card-title"><%= product.title %></h5>
+    			<img class="card-img-top" src="<%= product.path_to_image %>" alt="Card image cap">
+    			<p class="card-text"><%= product.description %></p>
+    			<a href="#" class="card-link">Card link</a>
+    			<a href="#" class="card-link">Another link</a>
+  </div>
+        </p>
+<% end %>
+
+</div>
